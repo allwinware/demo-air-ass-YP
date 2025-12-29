@@ -17,7 +17,7 @@ var commSeatDisp	= {
 			var onclick		= "apiCtl.onAssignSeatClick('"+segIdx+"', '"+seatNo+"', 'sel');";
 			
 			
-			if (seatStatus == "A" && charge > 0) {
+			if (seatStatus == "A") {
 				seatMap.find("[seatno="+seatNo+"]").attr("onclick", onclick).html('<span class="blind_box'+chargeZoom+'">'+charge.comma()+'</span>');
 			} else {
 				seatMap.find("[seatno="+seatNo+"]").addClass("disabled_seat");
@@ -226,7 +226,7 @@ var commSeatDisp	= {
 			var seatStatus	= seatInfo.seatStatus;
 			var onclick		= "apiCtl.onAssignSeatClick('"+segIdx+"', '"+seatNo+"', 'sel');";
 				
-			if (seatStatus == "A" & parseInt(charge) > 0) {
+			if (seatStatus == "A") {
 				seatMap.find("[seatno="+seatNo+"]").attr("onclick", onclick).removeClass("seat_orange");
 			} else {
 				seatMap.find("[seatno="+seatNo+"]").addClass("disabled_seat");
@@ -260,7 +260,7 @@ var commSeatDisp	= {
 				onclick		= "apiCtl.onEachSeatClick('"+segIdx+"', '"+seatNo+"', 'sel');";
 			}
 				
-			if (seatStatus == "A" & parseInt(charge) > 0) {
+			if (seatStatus == "A") {
 				seatMap.find("[seatno="+seatNo+"]").attr("onclick", onclick).removeClass("seat_orange");
 			} else {
 				seatMap.find("[seatno="+seatNo+"]").addClass("disabled_seat");
